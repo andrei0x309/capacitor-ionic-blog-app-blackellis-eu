@@ -1,0 +1,7 @@
+{
+  "name": "BlackEllis.ro-Blog-App-iv5",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
