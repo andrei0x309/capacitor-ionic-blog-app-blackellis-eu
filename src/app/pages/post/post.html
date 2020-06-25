@@ -1,0 +1,32 @@
+ 
+  <ion-header [translucent]="true">
+    <ion-toolbar  id="main-toolbar">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title> BlackEllis.eu </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+  
+  
+<ion-content class="home-content">
+  <div class="home-post-entity" padding>
+  <h2>{{ postTitle }}</h2>
+    <div class="post-content" [innerHTML]="postContent"></div>
+     <div class="small-date">&nbsp;&nbsp;&nbsp; <ion-icon name="calendar"></ion-icon>&nbsp; GMT date: &nbsp;{{  post.date_gmt.replace('T', ' ')  }}</div>
+    </div>  
+  </ion-content>
+  
+  
+   <!--
+   
+   <h2> <ion-icon name="alert"></ion-icon>1</h2>
+   <p>1</p>
+      <button ion-button  class="homepage-button" (click)=""> <ion-icon name="refresh"></ion-icon> &nbsp;1</button> 
+   
+     <p>
+      <button ion-button color="primary"> &nbsp;&nbsp;Load More</button>
+    </p>
+    -->

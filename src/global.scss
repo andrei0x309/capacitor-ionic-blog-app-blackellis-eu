@@ -13,14 +13,138 @@
 @import "~@ionic/angular/css/core.css";
 
 /* Basic CSS for apps built with Ionic */
-@import "~@ionic/angular/css/normalize.css";
-@import "~@ionic/angular/css/structure.css";
-@import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+//@import "~@ionic/angular/css/normalize.css";
+//@import "~@ionic/angular/css/structure.css";
+//@import "~@ionic/angular/css/typography.css";
+//@import '~@ionic/angular/css/display.css';
 
 /* Optional CSS utils that can be commented out */
-@import "~@ionic/angular/css/padding.css";
-@import "~@ionic/angular/css/float-elements.css";
-@import "~@ionic/angular/css/text-alignment.css";
-@import "~@ionic/angular/css/text-transformation.css";
-@import "~@ionic/angular/css/flex-utils.css";
+//@import "~@ionic/angular/css/padding.css";
+//@import "~@ionic/angular/css/float-elements.css";
+//@import "~@ionic/angular/css/text-alignment.css";
+//@import "~@ionic/angular/css/text-transformation.css";
+//@import "~@ionic/angular/css/flex-utils.css";
+
+// Menu 
+
+ #main-toolbar{
+  --background: #314b58;
+  --background: rgba(52,78,92, 1);
+  --background: linear-gradient(180deg, rgba(42,42,42,1) 5%, rgba(40,50,57,1) 10%, rgba(55,64,69,1) 50%, rgba(39,50,57,1) 100%);
+  --color: #fff;
+
+    a{
+      color: #fff;
+      text-decoration: none;
+    }
+
+}
+
+
+ion-list.list-menu h3{
+    padding-left:4%;
+    font-size:1.9rem;
+}
+    
+
+// Home and Single Post CSS
+
+.home-date-text{
+  
+  color: #555;
+  font-size: 0.8rem;
+  }
+  
+  .home-content {
+    --background: rgba(40,50,57,1);
+    --background: linear-gradient(180deg, rgba(42,42,42,1) 5%, rgba(40,50,57,1) 10%, rgba(55,64,69,1) 50%, rgba(39,50,57,1) 100%);
+    //background: rgb(45,20,44);
+    //background: linear-gradient(90deg, rgba(45,20,44,1) 0%, rgba(81,10,50,1) 100%);
+  }
+  
+  .home-post-entity {
+  margin:.3rem auto .5rem auto;
+  padding: .4rem;
+  background-color: #fff;
+  max-width: 45rem;
+  width:96%;
+
+  ion-img, img.featuredImg {
+    max-width:30rem;
+    margin: auto;
+    margin-bottom: 1em;
+    min-height: 1px !important;
+
+  }
+  
+    h2{
+    color: darkslategrey;
+    margin-left: 1em;
+    }
+
+  }
+
+
+
+    // Spiner 
+    
+    @-webkit-keyframes rotation {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes rotation {
+      0% {
+        -webkit-transform: rotate(0deg);
+                transform: rotate(0deg);
+      }
+      100% {
+        -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+      }
+    }
+    
+    .spin-load {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 50%;
+      border: 1px solid rgba(24, 24, 24, 0.6);
+      box-shadow: 0px 0px 20px rgba(44, 2, 122, 0.637), inset 0px 0px 20px rgba(18, 0, 46, 0.548);
+      margin: 5% auto 5% auto;
+      font-size: 10px;
+      position: relative;
+    }
+    
+    .spin-load .spin-text{
+     font-size: 14px;
+     color: #162538d7;
+     font-weight: bold;
+     position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      margin-left: 15%;
+     
+    }
+    
+    .spin-load::after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 1.5rem;
+      position: absolute;
+      top: 50%;
+      left: 2rem;
+      color: transparent;
+      box-shadow: -25px 0px 35px 15px #2c00556b;
+      transform-origin: 50px 0;
+      -webkit-animation: rotation linear 2s infinite;
+      animation: rotation linear 2s infinite;
+  }
+  
+  

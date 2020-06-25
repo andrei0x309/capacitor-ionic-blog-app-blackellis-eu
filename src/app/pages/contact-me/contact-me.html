@@ -1,0 +1,21 @@
+ 
+  <ion-header [translucent]="true">
+    <ion-toolbar  id="main-toolbar">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/home"></ion-back-button>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title> BlackEllis.eu </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+
+<ion-content class="home-content">
+
+  <div class="home-post-entity" padding>
+    <div *ngIf="showLoading" class="loading" ><div class="spin-load"><div class="spin-text">Contact Form ... </div></div></div>
+  <iframe #contactIframe (load)="contactIframeLoaded()" [src]="iframeUrlSafe" height="0" scrolling="no" seamless></iframe> 
+  </div>
+
+</ion-content>
+  
