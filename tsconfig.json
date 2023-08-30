@@ -1,23 +1,43 @@
 {
-  "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": false,
-    "declaration": false,
-    "downlevelIteration": true,
-    "experimentalDecorators": true,
+    "target": "esnext",
     "module": "esnext",
-    "moduleResolution": "node",
+    "strict": true,
+    "jsx": "preserve",
     "importHelpers": true,
-    "target": "ES6",
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "sourceMap": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "src/*"
+      ]
+    },
     "lib": [
-      "es2018",
-      "dom"
+      "esnext",
+      "dom",
+    ],
+    "types": [
+      "vite/client"
     ]
   },
-  "angularCompilerOptions": {
-    "fullTemplateTypeCheck": true,
-    "strictInjectionParameters": true
-  }
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "../../packages/shared/src/**/*.*",   
+     "../../packages/icons/src/**/*.vue",
+    "../../packages/components/**/*.vue"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "src/views/scrap",
+    "src/components/template/bottom-navigation.vue"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

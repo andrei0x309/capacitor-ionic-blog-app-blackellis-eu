@@ -1,10 +1,13 @@
-## blackEllis.ro-app-blog
-This is a IONIC APP for the blog blackEllis.eu uses IONIC 5, angular, capacitor, and Wordpress API.
+## blackEllis.eu-app-blog
 
-This repo has been rewritten from an old REPO.
+This is a simple Ionic blog app that WordPress REST API to fetch posts and display.
 
-### OLD Repo Link
-[https://gitlab.flashsoft.eu/ionic/blackellis.eu-blog-app-iv5](https://gitlab.flashsoft.eu/ionic/blackellis.eu-blog-app-iv5)
+*Repo rewritten History:*
 
-### Google Play Link 
+- first iteration was using Ionic 3 and Angular 5
+- second iteration was using Ionic 5 and Angular 7
+- current iteration is using Ionic 7 and Vue 3
+
+### Google Play Link
+
 [https://play.google.com/store/apps/details?id=ro.blackellis.ro.blog.app.andrei0x309](https://play.google.com/store/apps/details?id=ro.blackellis.ro.blog.app.andrei0x309)
