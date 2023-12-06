@@ -16,21 +16,21 @@
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
  
-        <activity
-            android:name="de.mindlib.sendIntent.SendIntentActivity"
-            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"
-            android:exported="true"
-            android:label="@string/title_activity_main"
-            android:launchMode="singleTask"
-            android:theme="@style/AppTheme.NoActionBarLaunch">
-            <intent-filter>
-                <action android:name="android.intent.action.SEND" />
+<!--        <activity-->
+<!--            android:name="de.mindlib.sendIntent.SendIntentActivity"-->
+<!--            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/title_activity_main"-->
+<!--            android:launchMode="singleTask"-->
+<!--            android:theme="@style/AppTheme.NoActionBarLaunch">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.SEND" />-->
 
-                <category android:name="android.intent.category.DEFAULT" />
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
 
-                <data android:mimeType="text/plain" />
-            </intent-filter>
-        </activity>
+<!--                <data android:mimeType="text/plain" />-->
+<!--            </intent-filter>-->
+<!--        </activity>-->
         <activity
             android:name=".MainActivity"
             android:configChanges="orientation|keyboardHidden|keyboard|screenSize|locale|smallestScreenSize|screenLayout|uiMode"

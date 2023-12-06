@@ -1,8 +1,9 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router';
 import { RouteRecordRaw } from 'vue-router';
 import HomePage from '@/views/HomePage.vue'
-import { CONSTANTS } from '@/store/constants';
+// import { CONSTANTS } from '@/store/constants';
 // import BottomNavigation from '@/components/template/bottom-navigation.vue'
+
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -151,12 +152,5 @@ const router = createRouter({
   history: createWebHistory(),
   routes
 })
-
-// useBackButton(99, () => {
-//   if (router.can === '/') {
-//     CapApp.minimizeApp()
-//   }
-// })
-
 
 export default router

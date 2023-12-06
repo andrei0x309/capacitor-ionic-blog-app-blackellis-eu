@@ -11,28 +11,23 @@
         :duration="4550"
         @didDismiss="toastState = false"
       ></ion-toast> -->
-
     </ion-page>
   </ion-app>
 </template>
 
 <script lang="ts">
-import {
-  IonApp,
-  IonRouterOutlet,
-  IonToast,
-  IonPage,
-} from "@ionic/vue";
+import { IonApp, IonRouterOutlet, IonToast, IonPage } from "@ionic/vue";
 import {
   defineComponent,
   // defineAsyncComponent,
   // watch,
 } from "vue";
 import HeaderMenu from "@/components/template/header-menu.vue";
-import { storage } from '@/utils/storage'
+import { storage } from "@/utils/storage";
 import { onBeforeMount } from "vue";
 import { useMainStore } from "./store/main";
-
+import { App } from "@capacitor/app";
+import { useBackButton, useIonRouter } from "@ionic/vue";
 
 export default defineComponent({
   name: "App",
@@ -41,24 +36,31 @@ export default defineComponent({
     IonRouterOutlet,
     IonToast,
     IonPage,
-    HeaderMenu
+    HeaderMenu,
   },
   setup() {
+    const mainStore = useMainStore();
+    const ionRouter = useIonRouter();
+    useBackButton(90, () => {
+      if (ionRouter.canGoBack()) {
+        ionRouter.back();
+      } else {
+        App.minimizeApp();
+      }
+    });
 
-    const mainStore = useMainStore()
     onBeforeMount(async () => {
-      const postStorage = await storage.get("postStorage")
-      if(postStorage) {
+      const postStorage = await storage.get("postStorage");
+      if (postStorage) {
         try {
-          mainStore.postStorage = JSON.parse(postStorage)
+          mainStore.postStorage = JSON.parse(postStorage);
         } catch (error) {
-          console.log(error)
         }
       }
-    })
- 
-    return {
-    };
+      console.log("postStorage", postStorage);
+    });
+
+    return {};
   },
 });
 </script>
