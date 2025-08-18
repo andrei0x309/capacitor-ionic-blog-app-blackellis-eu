@@ -10,7 +10,8 @@ if (window) {
         ; (<any>globalThis).globalThis = globalThis
 }
 
-import 'virtual:windi.css'
+import './theme/tailwind.css';
+
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/vue/css/core.css';
 
@@ -30,8 +31,7 @@ import '@ionic/vue/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 
-import 'windi.css'
-
+ 
 const app = createApp(App).use(IonicVue).use(router).use(createPinia());
 
 

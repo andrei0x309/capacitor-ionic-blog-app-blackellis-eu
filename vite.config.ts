@@ -2,9 +2,9 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { fileURLToPath, URL } from 'url'
 // import eslintPlugin from 'vite-plugin-eslint'
-import WindiCSS from 'vite-plugin-windicss'
 // import nodePolyfills from 'vite-plugin-node-stdlib-browser'
 import basicSsl from '@vitejs/plugin-basic-ssl'
+import tailwindcss from "@tailwindcss/vite";
 
 
 export default defineConfig({
@@ -29,8 +29,7 @@ export default defineConfig({
         //@ts-ignore
         // nodePolyfills(),
         vue(),
-        // eslintPlugin(),
-        WindiCSS(),
+        tailwindcss(),
         basicSsl()
     ],
     build: {

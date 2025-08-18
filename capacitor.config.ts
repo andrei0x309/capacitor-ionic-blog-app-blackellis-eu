@@ -1,4 +1,5 @@
 import { CapacitorConfig } from '@capacitor/cli';
+import { CONSTANTS } from './src/store/constants';
 
 const config: CapacitorConfig = {
   appId: "ro.blackellis.ro.blog.app.andrei0x309",
@@ -24,8 +25,17 @@ const config: CapacitorConfig = {
       layoutName: "launch_screen",
       useDialog: false,
     },
-    FirebaseMessaging: {
-      presentationOptions: ["badge", "sound", "alert"],
+    BackgroundRunner: {
+      label: CONSTANTS.backgroundTaskLabel,
+      src: "bg-runners/bg-task.js",
+      event: "checkLastPost",
+      repeat: true,
+      interval: 15,
+      autoStart: true
+    },
+    LocalNotifications: {
+      "smallIcon": "ic_launcher",
+      "iconColor": "#488AFF",
     }
   },
 };
