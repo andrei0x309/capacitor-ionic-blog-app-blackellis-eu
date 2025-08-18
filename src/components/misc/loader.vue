@@ -1,3 +1,15 @@
+
+<script lang="ts" setup>
+
+defineProps({
+  unset: {
+    type: Boolean,
+    default: false,
+  },
+});
+
+</script>
+
 <template>
   <div class="d-loader">
     <div class="row">
@@ -34,54 +46,6 @@
     </div>
   </div>
 </template>
-
-<script lang="ts">
-// import { useRoute, useRouter } from 'vue-router'
-import {
-  onMounted,
-  defineComponent,
-  //   reactive,
-  //   computed,
-  onUnmounted,
-} from "vue";
-
-export default defineComponent({
-  name: "DangLoader",
-  components: {},
-  props: {
-    color: {
-      required: false,
-      type: String,
-      default: "#23ff22",
-    },
-    size: {
-      required: false,
-      type: String,
-      default: "3rem",
-    },
-    unset: {
-      required: false,
-      type: Boolean,
-      default: false,
-    },
-  },
-  setup() {
-    // props
-    // const color = ref(props.color)
-    // const size = ref(props.size)
-
-    onMounted(async () => {
-      // do nothing
-    });
-
-    onUnmounted(() => {
-      // do nothing
-    });
-
-    return {};
-  },
-});
-</script>
 
 <style lang="scss">
 @use 'sass:math';

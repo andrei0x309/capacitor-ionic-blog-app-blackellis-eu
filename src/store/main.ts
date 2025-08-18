@@ -4,7 +4,7 @@ import type { IPost, StorageForPosts } from '@/types/common'
 
 export const DefaultMainStore = {
     viewPost: null as IPost | null,
-    postStorage: {} as StorageForPosts
+    postStorage: {} as StorageForPosts,
 }
 
 const useMainStore = defineStore('main', {

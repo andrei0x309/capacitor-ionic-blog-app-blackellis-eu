@@ -32,7 +32,7 @@
     "../../packages/shared/src/**/*.*",   
      "../../packages/icons/src/**/*.vue",
     "../../packages/components/**/*.vue"
-  ],
+, "src/bg-runners/bg-task.js"  ],
   "exclude": [
     "node_modules",
     "dist",

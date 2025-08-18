@@ -58,4 +58,4 @@ This policy is effective as of 2022-11-28
 
 **Contact Us**
 
-If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at andrei@flashsoft.eu.
+If you have any questions or suggestions about my Privacy Policy, do not hesitate to contact me at https://backellis.eu

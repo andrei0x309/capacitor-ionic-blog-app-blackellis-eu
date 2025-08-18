@@ -1,20 +1,12 @@
-<script lang="ts">
+<script lang="ts" setup>
 import {
   IonContent,
   IonPage,
-  IonList,
-  IonSelect,
-  IonSelectOption,
-  IonRefresher,
-  IonRefresherContent,
-  IonItem,
-  IonLoading,
-  IonChip,
   IonInfiniteScroll,
     IonInfiniteScrollContent,
     InfiniteScrollCustomEvent
 } from "@ionic/vue";
-import { defineComponent, ref, Ref, shallowRef, onMounted } from "vue";
+import { ref, Ref, onMounted } from "vue";
 import HeaderBar from "@/components/template/header-bar.vue";
 import { getLatestPosts } from "@/utils/posts";
 import PostItem from "@/components/post/post.vue";
@@ -24,27 +16,7 @@ import { CONSTANTS } from "@/store/constants";
 import Loader from "@/components/misc/loader.vue";
 import { useMainStore } from "@/store/main";
 
-export default defineComponent({
-  name: "HomePage",
-  components: {
-    IonContent,
-    IonPage,
-    IonList,
-    IonSelect,
-    IonSelectOption,
-    IonRefresher,
-    IonRefresherContent,
-    IonItem,
-    IonLoading,
-    IonChip,
-    HeaderBar,
-    PostItem,
-    Loader,
-    IonInfiniteScrollContent,
-    IonInfiniteScroll
-  },
-  setup () {
-    
+ 
     const posts = ref([]) as Ref<IPost[]>
     const mainStore = useMainStore()
     const loading = ref(false)
@@ -90,18 +62,7 @@ export default defineComponent({
       loadingMore.value = false
       ev.target.complete()
     }
-
-
-    return {
-      posts,
-      catParam,
-      catTitle,
-      loading,
-      loadMore
-    }
-
-  }
-});
+ 
 </script>
 
 <template>

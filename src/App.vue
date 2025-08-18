@@ -3,25 +3,12 @@
     <ion-page>
       <HeaderMenu />
       <ion-router-outlet id="ion-router-outlet" />
-
-      <!-- <ion-toast
-        :key="toastMsg"
-        :is-open="toastState"
-        :message="toastMsg"
-        :duration="4550"
-        @didDismiss="toastState = false"
-      ></ion-toast> -->
     </ion-page>
   </ion-app>
 </template>
 
-<script lang="ts">
-import { IonApp, IonRouterOutlet, IonToast, IonPage } from "@ionic/vue";
-import {
-  defineComponent,
-  // defineAsyncComponent,
-  // watch,
-} from "vue";
+<script lang="ts" setup>
+import { IonApp, IonRouterOutlet, IonPage } from "@ionic/vue";
 import HeaderMenu from "@/components/template/header-menu.vue";
 import { storage } from "@/utils/storage";
 import { onBeforeMount } from "vue";
@@ -29,16 +16,7 @@ import { useMainStore } from "./store/main";
 import { App } from "@capacitor/app";
 import { useBackButton, useIonRouter } from "@ionic/vue";
 
-export default defineComponent({
-  name: "App",
-  components: {
-    IonApp,
-    IonRouterOutlet,
-    IonToast,
-    IonPage,
-    HeaderMenu,
-  },
-  setup() {
+ 
     const mainStore = useMainStore();
     const ionRouter = useIonRouter();
     useBackButton(90, () => {
@@ -57,12 +35,8 @@ export default defineComponent({
         } catch (error) {
         }
       }
-      console.log("postStorage", postStorage);
     });
-
-    return {};
-  },
-});
+ 
 </script>
 
 <style lang="scss">
