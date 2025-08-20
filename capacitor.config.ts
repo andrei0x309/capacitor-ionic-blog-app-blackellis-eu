@@ -33,10 +33,17 @@ const config: CapacitorConfig = {
       interval: 15,
       autoStart: true
     },
-    LocalNotifications: {
-      "smallIcon": "ic_launcher",
-      "iconColor": "#488AFF",
-    }
+    Keyboard: {
+      resizeOnFullScreen: false
+    },
+    EdgeToEdge: {
+      backgroundColor: "#1e1e1e",
+    },
+    StatusBar: {
+      overlaysWebView: false,
+      style: "DARK",
+      backgroundColor: "#1e1e1e",
+    },
   },
 };
 

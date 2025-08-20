@@ -1,1 +1,16 @@
-res
+res/drawable
+res/mipmap-xxxhdpi
+res/drawable-land-hdpi
+res/drawable-land-mdpi
+res/drawable-land-xhdpi
+res/drawable-land-xxhdpi
+res/drawable-land-xxxhdpi
+res/drawable-port-hdpi
+res/drawable-port-mdpi
+res/drawable-port-xhdpi
+res/drawable-port-xxhdpi
+res/drawable-port-xxxhdpi
+res/mipmap-hdpi
+res/mipmap-mdpi
+res/mipmap-xhdpi
+res/mipmap-xxhdpi
