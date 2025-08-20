@@ -2,6 +2,13 @@
 
 >> Back to [Main Readme](./README.md)
 
+## versionCode 14
+
+- add better support for edge-to-edge layout on Android
+- updated Gradle to the latest version
+- updated some native Android dependencies
+- updated all web dependencies
+
 ## versionCode 13
 
 - added this changelog.md
